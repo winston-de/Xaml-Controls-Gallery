@@ -92,5 +92,7 @@
 
             <Frame x:Name="rootFrame" Navigated="OnRootFrameNavigated" />
         </mux:NavigationView>
+
+        <Button Content="Launch in AppWindow" Click="AppWindowButton_Click" VerticalAlignment="Top" Grid.Column="1" Margin="44,36" Height="32" />
     </Grid>
 </Page>

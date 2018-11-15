@@ -287,6 +287,24 @@ namespace AppUIBasics
                 AppTitleBar.Margin = new Thickness();
             }
         }
+
+        private async void AppWindowButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame rootFrame;
+            NavigationRootPage rootPage = Window.Current.Content as NavigationRootPage;
+
+            rootPage = new NavigationRootPage();
+            rootFrame = (Frame)rootPage.FindName("rootFrame");
+            if (rootFrame == null)
+            {
+                throw new Exception("Root frame not found");
+            }
+            Windows.UI.WindowManagement.ApplicationWindow applicationWindow = await Windows.UI.WindowManagement.ApplicationWindow.CreateAsync();
+
+            Windows.UI.Xaml.Hosting.ElementCompositionPreview.SetApplicationWindowContent(applicationWindow, rootPage);
+
+            applicationWindow.TryShow();
+        }
     }
 
 
