@@ -1,0 +1,91 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Default">
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <SolidColorBrush x:Key="SystemControlTransientBackgroundBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlAcrylicWindowBrush" Color="{StaticResource SystemChromeMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlAcrylicElementBrush" Color="{StaticResource SystemChromeMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlAccentAcrylicWindowAccentMediumHighBrush" Color="{ThemeResource SystemAccentColor}" />
+                    <SolidColorBrush x:Key="SystemControlAccentAcrylicElementAccentMediumHighBrush" Color="{ThemeResource SystemAccentColor}" />
+                    <SolidColorBrush x:Key="SystemControlAccentDark1AcrylicWindowAccentDark1Brush" Color="{ThemeResource SystemAccentColorDark1}" />
+                    <SolidColorBrush x:Key="SystemControlAccentDark1AcrylicElementAccentDark1Brush" Color="{ThemeResource SystemAccentColorDark1}" />
+                    <SolidColorBrush x:Key="SystemControlAccentDark2AcrylicWindowAccentDark2MediumHighBrush" Color="{ThemeResource SystemAccentColorDark2}" />
+                    <SolidColorBrush x:Key="SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush" Color="{ThemeResource SystemAccentColorDark2}" />
+                    <SolidColorBrush x:Key="SystemControlAcrylicWindowMediumHighBrush" Color="{StaticResource SystemChromeMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlAcrylicElementMediumHighBrush" Color="{StaticResource SystemChromeMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeMediumLowAcrylicWindowMediumBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeMediumLowAcrylicElementMediumBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicWindowBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicElementBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicWindowMediumHighBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicElementMediumHighBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicWindowMediumBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicElementMediumBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeLowAcrylicWindowBrush" Color="{StaticResource SystemChromeLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeLowAcrylicElementBrush" Color="{StaticResource SystemChromeLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeMediumAcrylicWindowMediumBrush" Color="{StaticResource SystemChromeMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeMediumAcrylicElementMediumBrush" Color="{StaticResource SystemChromeMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeHighAcrylicWindowMediumBrush" Color="{StaticResource SystemChromeHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeHighAcrylicElementMediumBrush" Color="{StaticResource SystemChromeHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseLowAcrylicWindowBrush" Color="{StaticResource SystemBaseLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseLowAcrylicElementBrush" Color="{StaticResource SystemBaseLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseMediumLowAcrylicWindowMediumBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseMediumLowAcrylicElementMediumBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlAltLowAcrylicWindowBrush" Color="{StaticResource SystemAltLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlAltLowAcrylicElementBrush" Color="{StaticResource SystemAltLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlAltMediumLowAcrylicWindowMediumBrush" Color="{StaticResource SystemAltMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlAltMediumLowAcrylicElementMediumBrush" Color="{StaticResource SystemAltMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlAltHighAcrylicWindowBrush" Color="{StaticResource SystemAltHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlAltHighAcrylicElementBrush" Color="{StaticResource SystemAltHighColor}" />
+                    
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="Light">
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <SolidColorBrush x:Key="SystemControlTransientBackgroundBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlAcrylicWindowBrush" Color="{StaticResource SystemChromeMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlAcrylicElementBrush" Color="{StaticResource SystemChromeMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlAccentAcrylicWindowAccentMediumHighBrush" Color="{ThemeResource SystemAccentColor}" />
+                    <SolidColorBrush x:Key="SystemControlAccentAcrylicElementAccentMediumHighBrush" Color="{ThemeResource SystemAccentColor}" />
+                    <SolidColorBrush x:Key="SystemControlAccentDark1AcrylicWindowAccentDark1Brush" Color="{ThemeResource SystemAccentColorDark1}" />
+                    <SolidColorBrush x:Key="SystemControlAccentDark1AcrylicElementAccentDark1Brush" Color="{ThemeResource SystemAccentColorDark1}" />
+                    <SolidColorBrush x:Key="SystemControlAccentDark2AcrylicWindowAccentDark2MediumHighBrush" Color="{ThemeResource SystemAccentColorDark2}" />
+                    <SolidColorBrush x:Key="SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush" Color="{ThemeResource SystemAccentColorDark2}" />
+                    <SolidColorBrush x:Key="SystemControlAcrylicWindowMediumHighBrush" Color="{StaticResource SystemChromeMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlAcrylicElementMediumHighBrush" Color="{StaticResource SystemChromeMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeMediumLowAcrylicWindowMediumBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeMediumLowAcrylicElementMediumBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicWindowBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicElementBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicWindowMediumHighBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicElementMediumHighBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicWindowMediumBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicElementMediumBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeLowAcrylicWindowBrush" Color="{StaticResource SystemChromeLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeLowAcrylicElementBrush" Color="{StaticResource SystemChromeLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeMediumAcrylicWindowMediumBrush" Color="{StaticResource SystemChromeMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeMediumAcrylicElementMediumBrush" Color="{StaticResource SystemChromeMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeHighAcrylicWindowMediumBrush" Color="{StaticResource SystemChromeHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlChromeHighAcrylicElementMediumBrush" Color="{StaticResource SystemChromeHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseLowAcrylicWindowBrush" Color="{StaticResource SystemBaseLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseLowAcrylicElementBrush" Color="{StaticResource SystemBaseLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseMediumLowAcrylicWindowMediumBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBaseMediumLowAcrylicElementMediumBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlAltLowAcrylicWindowBrush" Color="{StaticResource SystemAltLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlAltLowAcrylicElementBrush" Color="{StaticResource SystemAltLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlAltMediumLowAcrylicWindowMediumBrush" Color="{StaticResource SystemAltMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlAltMediumLowAcrylicElementMediumBrush" Color="{StaticResource SystemAltMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlAltHighAcrylicWindowBrush" Color="{StaticResource SystemAltHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlAltHighAcrylicElementBrush" Color="{StaticResource SystemAltHighColor}" />
+
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+</ResourceDictionary>

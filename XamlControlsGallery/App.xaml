@@ -19,8 +19,9 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <local:ItemTemplates />
+                <ResourceDictionary Source="DisabledAcrylic.xaml"/>
+                <ResourceDictionary Source="DisabledReveal.xaml"/>
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>
-                <ResourceDictionary Source="NoAcrylicOrReveal.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <ResourceDictionary.ThemeDictionaries>
@@ -29,14 +30,12 @@
                     <SolidColorBrush x:Key="SearchBoxBorderBrush" Color="Transparent" />
                     <ImageSource x:Key="PTRCustom">ms-appx:///Assets/sun-100-Black.png</ImageSource>
                     <Thickness x:Key="SearchBoxBorderThickness">0</Thickness>
-                    <ResourceDictionary Source="NoAcrylicOrReveal.xaml" x:Key="MyKey" />
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Dark">
                     <StaticResource x:Key="HomePageBackgroundBrush" ResourceKey="ApplicationPageBackgroundThemeBrush" />
                     <SolidColorBrush x:Key="SearchBoxBorderBrush" Color="Transparent" />
                     <ImageSource x:Key="PTRCustom">ms-appx:///Assets/Sun.32.scale-100-White.png</ImageSource>
                     <Thickness x:Key="SearchBoxBorderThickness">0</Thickness>
-                    <ResourceDictionary Source="NoAcrylicOrReveal.xaml" x:Key="MyKey" />
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="HighContrast">
                     <SolidColorBrush x:Key="HomePageBackgroundBrush" Color="{ThemeResource SystemColorWindowColor}" />

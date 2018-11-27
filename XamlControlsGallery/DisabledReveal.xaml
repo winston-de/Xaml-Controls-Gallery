@@ -1,0 +1,90 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Default">
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <SolidColorBrush x:Key="SystemControlHighlightListLowRevealBackgroundBrush" Color="{StaticResource SystemListLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumLowRevealBorderBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundTransparentRevealBorderBrush" Color="Transparent" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundAccentRevealBorderBrush"  Color="{ThemeResource SystemAccentColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundBaseHighRevealBorderBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundBaseLowRevealBorderBrush" Color="{StaticResource SystemBaseLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumRevealBorderBrush" Color="{StaticResource SystemBaseMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumHighRevealBorderBrush" Color="{StaticResource SystemBaseMediumHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumLowRevealBorderBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundChromeBlackHighRevealBorderBrush" Color="{StaticResource SystemChromeBlackHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundChromeBlackMediumRevealChromeBorderBrush" Color="{StaticResource SystemChromeBlackMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundChromeMediumRevealBorderBrush" Color="{StaticResource SystemChromeMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundChromeMediumLowRevealBorderBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundChromeWhiteRevealBorderBrush" Color="{StaticResource SystemChromeWhiteColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundListLowRevealBorderBrush" Color="{StaticResource SystemListLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundListMediumRevealBorderBrush" Color="{StaticResource SystemListMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightAccentRevealBorderBrush" Color="{ThemeResource SystemAccentColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightBaseHighRevealBorderBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightBaseLowRevealBorderBrush" Color="{StaticResource SystemBaseLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumRevealBorderBrush" Color="{StaticResource SystemBaseMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumHighRevealBorderBrush" Color="{StaticResource SystemBaseMediumHighColor}" />
+
+                    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumLowRevealAccentBackgroundBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundBaseLowRevealBackgroundBrush" Color="{StaticResource SystemBaseLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumLowRevealBaseLowBackgroundBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightListMediumRevealBackgroundBrush" Color="{StaticResource SystemListMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightAccentRevealBackgroundBrush" Color="{ThemeResource SystemAccentColor}" />
+                    <SolidColorBrush x:Key="SystemControlTransparentRevealBackgroundBrush" Color="Transparent" />
+                    <SolidColorBrush x:Key="SystemControlHighlightListMediumRevealListLowBackgroundBrush" Color="{StaticResource SystemListMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightAccent3RevealBackgroundBrush" Color="{ThemeResource SystemAccentColorDark3}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightAccent3RevealAccent2BackgroundBrush" Color="{ThemeResource SystemAccentColorDark3}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightAccent2RevealBackgroundBrush" Color="{ThemeResource SystemAccentColorDark2}" />
+
+                    <SolidColorBrush x:Key="SystemControlTransparentRevealBorderBrush" Color="Transparent" />
+
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="Light">
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <SolidColorBrush x:Key="SystemControlHighlightListLowRevealBackgroundBrush" Color="{StaticResource SystemListLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumLowRevealBorderBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundTransparentRevealBorderBrush" Color="Transparent" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundAccentRevealBorderBrush"  Color="{ThemeResource SystemAccentColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundBaseHighRevealBorderBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundBaseLowRevealBorderBrush" Color="{StaticResource SystemBaseLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumRevealBorderBrush" Color="{StaticResource SystemBaseMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumHighRevealBorderBrush" Color="{StaticResource SystemBaseMediumHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumLowRevealBorderBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundChromeBlackHighRevealBorderBrush" Color="{StaticResource SystemChromeBlackHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundChromeBlackMediumRevealChromeBorderBrush" Color="{StaticResource SystemChromeBlackMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundChromeMediumRevealBorderBrush" Color="{StaticResource SystemChromeMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundChromeMediumLowRevealBorderBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundChromeWhiteRevealBorderBrush" Color="{StaticResource SystemChromeWhiteColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundListLowRevealBorderBrush" Color="{StaticResource SystemListLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundListMediumRevealBorderBrush" Color="{StaticResource SystemListMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightAccentRevealBorderBrush" Color="{ThemeResource SystemAccentColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightBaseHighRevealBorderBrush" Color="{StaticResource SystemBaseHighColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightBaseLowRevealBorderBrush" Color="{StaticResource SystemBaseLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumRevealBorderBrush" Color="{StaticResource SystemBaseMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumHighRevealBorderBrush" Color="{StaticResource SystemBaseMediumHighColor}" />
+
+                    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumLowRevealAccentBackgroundBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundBaseLowRevealBackgroundBrush" Color="{StaticResource SystemBaseLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumLowRevealBaseLowBackgroundBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightListMediumRevealBackgroundBrush" Color="{StaticResource SystemListMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightAccentRevealBackgroundBrush" Color="{ThemeResource SystemAccentColor}" />
+                    <SolidColorBrush x:Key="SystemControlTransparentRevealBackgroundBrush" Color="Transparent" />
+                    <SolidColorBrush x:Key="SystemControlHighlightListMediumRevealListLowBackgroundBrush" Color="{StaticResource SystemListMediumColor}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightAccent3RevealBackgroundBrush" Color="{ThemeResource SystemAccentColorDark3}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightAccent3RevealAccent2BackgroundBrush" Color="{ThemeResource SystemAccentColorDark3}" />
+                    <SolidColorBrush x:Key="SystemControlHighlightAccent2RevealBackgroundBrush" Color="{ThemeResource SystemAccentColorDark2}" />
+
+                    <SolidColorBrush x:Key="SystemControlTransparentRevealBorderBrush" Color="Transparent" />
+                    
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+
+</ResourceDictionary>
