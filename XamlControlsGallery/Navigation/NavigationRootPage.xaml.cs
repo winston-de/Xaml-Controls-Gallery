@@ -299,11 +299,11 @@ namespace AppUIBasics
             {
                 throw new Exception("Root frame not found");
             }
-            Windows.UI.WindowManagement.ApplicationWindow applicationWindow = await Windows.UI.WindowManagement.ApplicationWindow.CreateAsync();
+            Windows.UI.WindowManagement.AppWindow applicationWindow = await Windows.UI.WindowManagement.AppWindow.TryCreateAsync();
 
             Windows.UI.Xaml.Hosting.ElementCompositionPreview.SetApplicationWindowContent(applicationWindow, rootPage);
 
-            applicationWindow.TryShow();
+            await applicationWindow.TryShowAsync();
         }
     }
 
