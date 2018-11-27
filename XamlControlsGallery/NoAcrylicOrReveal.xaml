@@ -1,0 +1,78 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppUIBasics">
+
+    <SolidColorBrush x:Key="SystemControlAcrylicWindowBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAcrylicElementBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAccentAcrylicWindowAccentMediumHighBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAccentAcrylicElementAccentMediumHighBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAccentDark1AcrylicWindowAccentDark1Brush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAccentDark1AcrylicElementAccentDark1Brush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAccentDark2AcrylicWindowAccentDark2MediumHighBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAcrylicWindowMediumHighBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAcrylicElementMediumHighBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlChromeMediumLowAcrylicWindowMediumBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlChromeMediumLowAcrylicElementMediumBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicWindowBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicElementBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicWindowMediumHighBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicElementMediumHighBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicWindowMediumBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicElementMediumBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlChromeLowAcrylicWindowBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlChromeLowAcrylicElementBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlChromeMediumAcrylicWindowMediumBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlChromeMediumAcrylicElementMediumBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlChromeHighAcrylicWindowMediumBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlChromeHighAcrylicElementMediumBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlBaseLowAcrylicWindowBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlBaseLowAcrylicElementBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlBaseMediumLowAcrylicWindowMediumBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlBaseMediumLowAcrylicElementMediumBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAltLowAcrylicWindowBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAltLowAcrylicElementBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAltMediumLowAcrylicWindowMediumBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAltMediumLowAcrylicElementMediumBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAltHighAcrylicWindowBrush" Color="Teal" />
+    <SolidColorBrush x:Key="SystemControlAltHighAcrylicElementBrush" Color="Teal" />
+
+    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumLowRevealAccentBackgroundBrush" Color="Pink" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseLowRevealBackgroundBrush" Color="Pink" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumLowRevealBaseLowBackgroundBrush" Color="Pink" />
+    <SolidColorBrush x:Key="SystemControlHighlightListMediumRevealBackgroundBrush" Color="Pink" />
+    <SolidColorBrush x:Key="SystemControlHighlightAccentRevealBackgroundBrush" Color="Pink" />
+    <SolidColorBrush x:Key="SystemControlTransparentRevealBackgroundBrush" Color="Pink" />
+    <SolidColorBrush x:Key="SystemControlHighlightListMediumRevealListLowBackgroundBrush" Color="Pink" />
+    <SolidColorBrush x:Key="SystemControlHighlightListLowRevealBackgroundBrush" Color="Pink" />
+    <SolidColorBrush x:Key="SystemControlHighlightAccent3RevealBackgroundBrush" Color="Pink" />
+    <SolidColorBrush x:Key="SystemControlHighlightAccent3RevealAccent2BackgroundBrush" Color="Pink" />
+    <SolidColorBrush x:Key="SystemControlHighlightAccent2RevealBackgroundBrush" Color="Pink" />
+
+    <SolidColorBrush x:Key="SystemControlBackgroundAccentRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseHighRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseLowRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumHighRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumLowRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeBlackHighRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeBlackMediumRevealChromeBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeMediumRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeMediumLowRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeWhiteRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlBackgroundListLowRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlBackgroundListMediumRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlHighlightAccentRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseHighRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseLowRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumHighRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltTransparentRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumLowRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlTransparentRevealListLowBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlBackgroundTransparentRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlHighlightTransparentRevealBorderBrush" Color="Orange" />
+    <SolidColorBrush x:Key="SystemControlTransparentRevealBorderBrush" Color="Orange" />
+
+</ResourceDictionary>
