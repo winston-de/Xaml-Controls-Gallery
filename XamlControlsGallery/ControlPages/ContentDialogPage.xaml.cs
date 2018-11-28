@@ -30,6 +30,10 @@ namespace AppUIBasics.ControlPages
         private async void ShowDialog_Click(object sender, RoutedEventArgs e)
         {
             ContentDialogExample dialog = new ContentDialogExample();
+
+            // Show the dialog in the right island
+            dialog.XamlRoot = this.XamlRoot;
+
             var result = await dialog.ShowAsync();
 
             if (result == ContentDialogResult.Primary)
