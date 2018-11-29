@@ -69,6 +69,8 @@ namespace AppUIBasics
 
             if (selectedTheme != null)
             {
+                (this.XamlRoot.Content as FrameworkElement).RequestedTheme = App.GetEnum<ElementTheme>(selectedTheme);
+
                 App.RootTheme = App.GetEnum<ElementTheme>(selectedTheme);
                 if (selectedTheme == "Dark")
                 {
