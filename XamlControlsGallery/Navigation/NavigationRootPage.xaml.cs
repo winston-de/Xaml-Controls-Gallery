@@ -301,7 +301,7 @@ namespace AppUIBasics
             }
             Windows.UI.WindowManagement.AppWindow applicationWindow = await Windows.UI.WindowManagement.AppWindow.TryCreateAsync();
 
-            Windows.UI.Xaml.Hosting.ElementCompositionPreview.SetApplicationWindowContent(applicationWindow, rootPage);
+            Windows.UI.Xaml.Hosting.ElementCompositionPreview.SetAppWindowContent(applicationWindow, rootPage);
 
             await applicationWindow.TryShowAsync();
         }
