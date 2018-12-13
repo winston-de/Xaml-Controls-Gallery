@@ -44,6 +44,8 @@ namespace AppUIBasics
         private Microsoft.UI.Xaml.Controls.NavigationViewItem _allControlsMenuItem;
         private Microsoft.UI.Xaml.Controls.NavigationViewItem _newControlsMenuItem;
 
+        public Boolean IsInAppWindow { get; set; }
+
         public Microsoft.UI.Xaml.Controls.NavigationView NavigationView
         {
             get { return NavigationViewControl; }
@@ -95,6 +97,8 @@ namespace AppUIBasics
             CoreApplication.GetCurrentView().TitleBar.LayoutMetricsChanged += (s, e) => UpdateAppTitle(s);
 
             _isKeyboardConnected = Convert.ToBoolean(new KeyboardCapabilities().KeyboardPresent);
+
+            IsInAppWindow = false;
         }
 
         void UpdateAppTitle(CoreApplicationViewTitleBar coreTitleBar)
@@ -272,11 +276,15 @@ namespace AppUIBasics
 
         private void NavigationViewControl_PaneClosing(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs args)
         {
+            if (IsInAppWindow) return;
+
             AppTitle.Visibility = Visibility.Collapsed;
         }
 
         private void NavigationViewControl_PaneOpened(Microsoft.UI.Xaml.Controls.NavigationView sender, object args)
         {
+            if (IsInAppWindow) return;
+
             AppTitle.Visibility = Visibility.Visible;
             if (sender.DisplayMode == Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode.Expanded)
             {
@@ -294,16 +302,19 @@ namespace AppUIBasics
             NavigationRootPage rootPage = Window.Current.Content as NavigationRootPage;
 
             rootPage = new NavigationRootPage();
+            rootPage.IsInAppWindow = true;
             rootFrame = (Frame)rootPage.FindName("rootFrame");
             if (rootFrame == null)
             {
                 throw new Exception("Root frame not found");
             }
-            Windows.UI.WindowManagement.AppWindow applicationWindow = await Windows.UI.WindowManagement.AppWindow.TryCreateAsync();
+            Windows.UI.WindowManagement.AppWindow appWindow = await Windows.UI.WindowManagement.AppWindow.TryCreateAsync();
 
-            Windows.UI.Xaml.Hosting.ElementCompositionPreview.SetAppWindowContent(applicationWindow, rootPage);
+            Windows.UI.Xaml.Hosting.ElementCompositionPreview.SetAppWindowContent(appWindow, rootPage);
 
-            await applicationWindow.TryShowAsync();
+            appWindow.Title = "Xaml Controls Gallery (AppWindow)";
+
+            await appWindow.TryShowAsync();
         }
     }
 

@@ -52,6 +52,7 @@
             <common:ValueToFontFamilyConverter x:Key="valueToFontFamilyConverter" />
             <common:ComboBoxItemToStringConverter x:Key="comboBoxItemToStringConverter" />
             <common:BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter" />
+            <common:BooleanNegationToVisibilityConverter x:Key="booleanNegationToVisibilityConverter" />
             <common:NullableBooleanToBooleanConverter x:Key="nullableBooleanToBooleanConverter" />
             <common:StringToBrushConverter x:Key="stringToBrushConverter" />
             <common:NullToVisibilityConverter x:Key="nullToVisibilityConverter" />
