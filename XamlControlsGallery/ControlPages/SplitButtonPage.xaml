@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:muxcontrols="using:Microsoft.UI.Xaml.Controls"
+      xmlns:isColumnSpacingPresent="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsPropertyPresent(Windows.UI.Xaml.Controls.Grid, ColumnSpacing)"
       mc:Ignorable="d">
 
     <Page.Resources>
@@ -15,7 +16,7 @@
         <local:ControlExample x:Name="Example1" HeaderText="A SplitButton controling text color in a RichEditBox" 
                               XamlSource="Buttons\SplitButton\SplitButtonSample1.txt"
                               WebViewHeight="150">
-            <Grid x:Name="Control1" ColumnSpacing="24">
+            <Grid x:Name="Control1" isColumnSpacingPresent:ColumnSpacing="24">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>

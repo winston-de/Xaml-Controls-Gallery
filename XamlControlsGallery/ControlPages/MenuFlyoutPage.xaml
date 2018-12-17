@@ -13,7 +13,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="using:AppUIBasics"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+        xmlns:isApiContract5="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 5)">
     <StackPanel>
         <local:ControlExample x:Name="Example1" HeaderText="An AppBarButton with a MenuFlyout.">
             <StackPanel x:Name="Control1" Orientation="Horizontal">
@@ -155,19 +156,19 @@
                             <MenuFlyoutItem.Icon>
                                 <FontIcon Glyph="&#xE72D;" />
                             </MenuFlyoutItem.Icon>
-                            <MenuFlyoutItem.KeyboardAccelerators>
+                            <isApiContract5:MenuFlyoutItem.KeyboardAccelerators>
                                 <KeyboardAccelerator Key="S" Modifiers="Control" />
-                            </MenuFlyoutItem.KeyboardAccelerators>
+                            </isApiContract5:MenuFlyoutItem.KeyboardAccelerators>
                         </MenuFlyoutItem>
                         <MenuFlyoutItem Text="Copy" Icon="Copy" FontFamily="Consolas" >
-                            <MenuFlyoutItem.KeyboardAccelerators>
+                            <isApiContract5:MenuFlyoutItem.KeyboardAccelerators>
                                 <KeyboardAccelerator Key="C" Modifiers="Control" />
-                            </MenuFlyoutItem.KeyboardAccelerators>
+                            </isApiContract5:MenuFlyoutItem.KeyboardAccelerators>
                         </MenuFlyoutItem>
                         <MenuFlyoutItem Text="Delete" Icon="Delete" FontFamily="Segoe UI" >
-                            <MenuFlyoutItem.KeyboardAccelerators>
+                            <isApiContract5:MenuFlyoutItem.KeyboardAccelerators>
                                 <KeyboardAccelerator Key="Delete"/>
-                            </MenuFlyoutItem.KeyboardAccelerators>
+                            </isApiContract5:MenuFlyoutItem.KeyboardAccelerators>
                         </MenuFlyoutItem>
                         <MenuFlyoutSeparator />
                         <MenuFlyoutItem Text="Rename" />
