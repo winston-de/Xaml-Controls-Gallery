@@ -15,10 +15,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:isStackPanelSpacingPresent="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsPropertyPresent(Windows.UI.Xaml.Controls.StackPanel, Spacing)"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel x:Name="CompactPanel" Spacing="16">
+        <StackPanel x:Name="CompactPanel" isStackPanelSpacingPresent:Spacing="16">
             <TextBlock x:Name="HeaderBlock" Text="Standard Size" FontSize="18"/>
             <TextBox Header="First Name:" x:Name="txtfirstName" />
             <TextBox Header="Last Name:" x:Name="txtLastName"  />
