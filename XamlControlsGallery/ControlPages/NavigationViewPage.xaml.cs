@@ -16,6 +16,7 @@ using Windows.UI.ViewManagement;
 using Windows.ApplicationModel.Core;
 using Windows.UI.Core;
 using AppUIBasics.Data;
+using Windows.UI.Xaml.Automation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -72,11 +73,14 @@ namespace AppUIBasics.ControlPages
             else
             {
                 var selectedItem = (Microsoft.UI.Xaml.Controls.NavigationViewItem)args.SelectedItem;
-                string selectedItemTag = ((string)selectedItem.Tag);
-                sender.Header = "Sample Page " + selectedItemTag.Substring(selectedItemTag.Length - 1);
-                string pageName = "AppUIBasics.SamplePages." + selectedItemTag;
-                Type pageType = Type.GetType(pageName);
-                contentFrame.Navigate(pageType);
+                if (selectedItem != null)
+                {
+                    string selectedItemTag = ((string)selectedItem.Tag);
+                    sender.Header = "Sample Page " + selectedItemTag.Substring(selectedItemTag.Length - 1);
+                    string pageName = "AppUIBasics.SamplePages." + selectedItemTag;
+                    Type pageType = Type.GetType(pageName);
+                    contentFrame.Navigate(pageType);
+                }
             }
         }
 
@@ -230,7 +234,9 @@ namespace AppUIBasics.ControlPages
         {
             if ((sender as CheckBox).IsChecked == true)
             {
-                nvSample.AutoSuggestBox = new AutoSuggestBox() { QueryIcon = new SymbolIcon(Symbol.Find) };
+                AutoSuggestBox asb = new AutoSuggestBox() { QueryIcon = new SymbolIcon(Symbol.Find) };
+                asb.SetValue(AutomationProperties.NameProperty, "search");
+                nvSample.AutoSuggestBox = asb;
             }
             else
             {
@@ -262,18 +268,25 @@ namespace AppUIBasics.ControlPages
             }
         }
 
-        private void panePositionLeft_Click(object sender, RoutedEventArgs e)
+        private void panePositionLeft_Checked(object sender, RoutedEventArgs e)
         {
-            nvSample.PaneDisplayMode = Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Left;
-            nvSample.IsPaneOpen = true;
-            FooterStackPanel.Orientation = Orientation.Vertical;
+            if ((sender as RadioButton).IsChecked == true && nvSample != null)
+            {
+                nvSample.PaneDisplayMode = Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Left;
+                nvSample.IsPaneOpen = true;
+                FooterStackPanel.Orientation = Orientation.Vertical;
+            }
         }
 
-        private void panePositionTop_Click(object sender, RoutedEventArgs e)
+
+        private void panePositionTop_Checked(object sender, RoutedEventArgs e)
         {
-            nvSample.PaneDisplayMode = Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Top;
-            nvSample.IsPaneOpen = false;
-            FooterStackPanel.Orientation = Orientation.Horizontal;
+            if ((sender as RadioButton).IsChecked == true && nvSample != null)
+            {
+                nvSample.PaneDisplayMode = Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Top;
+                nvSample.IsPaneOpen = false;
+                FooterStackPanel.Orientation = Orientation.Horizontal;
+            }
         }
 
         private void sffCheck_Click(object sender, RoutedEventArgs e)

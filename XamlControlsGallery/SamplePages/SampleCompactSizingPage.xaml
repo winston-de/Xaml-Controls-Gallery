@@ -31,8 +31,8 @@
             <TextBox Header="First Name:" x:Name="txtfirstName" />
             <TextBox Header="Last Name:" x:Name="txtLastName"  />
             <PasswordBox Header="Password:" />
-            <PasswordBox Header="Confrim Password:" />
-            <ComboBox Header="State:">
+            <PasswordBox Header="Confirm Password:" />
+            <ComboBox Header="State:" AutomationProperties.Name="State">
                 <ComboBoxItem Content="Alabama" />
                 <ComboBoxItem Content="Alaska" />
                 <ComboBoxItem Content="Arizona" />
