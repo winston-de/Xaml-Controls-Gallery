@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:AppUIBasics"
     xmlns:media="using:Windows.UI.Xaml.Media"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Media"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -11,8 +12,8 @@
         <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Default">
-                    <media:AcrylicBrush x:Key="CustomAcrylicInAppBrush" BackgroundSource="Backdrop" TintOpacity="0.8" TintColor="Black" FallbackColor="Green"/>
-                    <media:AcrylicBrush x:Key="CustomAcrylicBackgroundBrush" BackgroundSource="HostBackdrop" TintOpacity="0.8" TintColor="Black" FallbackColor="Green"/>
+                    <muxc:AcrylicBrush x:Key="CustomAcrylicInAppBrush" BackgroundSource="Backdrop" TintOpacity="0.8" TintColor="Black" FallbackColor="Green"/>
+                    <muxc:AcrylicBrush x:Key="CustomAcrylicBackgroundBrush" BackgroundSource="HostBackdrop" TintOpacity="0.8" TintColor="Black" FallbackColor="Green"/>
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
 

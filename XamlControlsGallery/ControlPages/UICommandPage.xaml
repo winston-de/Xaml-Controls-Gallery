@@ -75,17 +75,17 @@
                                             </VisualState>
                                         </VisualStateGroup>
                                     </VisualStateManager.VisualStateGroups>
-                                    <SwipeControl x:Name="ListViewSwipeContainer" >
-                                        <SwipeControl.RightItems>
-                                            <SwipeItems Mode="Execute">
-                                                <SwipeItem x:Name="DeleteSwipeItem" Background="Red" Command="{x:Bind Command}" CommandParameter="{x:Bind Text}"/>
-                                            </SwipeItems>
-                                        </SwipeControl.RightItems>
+                                    <muxcontrols:SwipeControl x:Name="ListViewSwipeContainer" >
+                                        <muxcontrols:SwipeControl.RightItems>
+                                            <muxcontrols:SwipeItems Mode="Execute">
+                                                <muxcontrols:SwipeItem x:Name="DeleteSwipeItem" Background="Red" Command="{x:Bind Command}" CommandParameter="{x:Bind Text}"/>
+                                            </muxcontrols:SwipeItems>
+                                        </muxcontrols:SwipeControl.RightItems>
                                         <Grid VerticalAlignment="Center">
                                             <TextBlock Text="{x:Bind Text}" Margin="10" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                                             <AppBarButton x:Name="HoverButton" IsTabStop="False" HorizontalAlignment="Right" Visibility="Collapsed" Command="{x:Bind Command}" CommandParameter="{x:Bind Text}"/>
                                         </Grid>
-                                    </SwipeControl>
+                                    </muxcontrols:SwipeControl>
                                 </Grid>
                             </UserControl>
                         </DataTemplate>

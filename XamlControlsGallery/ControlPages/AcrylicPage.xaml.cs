@@ -2,7 +2,7 @@
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Media;
+using muxmedia = Microsoft.UI.Xaml.Media;
 using Windows.UI.Xaml.Shapes;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -30,19 +30,19 @@ namespace AppUIBasics.ControlPages
         private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
             Rectangle shape = (sender == OpacitySliderInApp) ? CustomAcrylicShapeInApp : CustomAcrylicShape;
-            ((AcrylicBrush)shape.Fill).TintOpacity = e.NewValue;
+            ((muxmedia.AcrylicBrush)shape.Fill).TintOpacity = e.NewValue;
         }
 
         private void ColorSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Rectangle shape = (sender == ColorSelectorInApp) ? CustomAcrylicShapeInApp : CustomAcrylicShape;
-            ((AcrylicBrush)shape.Fill).TintColor = ((SolidColorBrush)e.AddedItems.First()).Color;
+            ((muxmedia.AcrylicBrush)shape.Fill).TintColor = ((Windows.UI.Xaml.Media.SolidColorBrush)e.AddedItems.First()).Color;
         }
 
         private void FallbackColorSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Rectangle shape = (sender == FallbackColorSelectorInApp) ? CustomAcrylicShapeInApp : CustomAcrylicShape;
-            ((AcrylicBrush)shape.Fill).FallbackColor = ((SolidColorBrush)e.AddedItems.First()).Color;
+            ((muxmedia.AcrylicBrush)shape.Fill).FallbackColor = ((Windows.UI.Xaml.Media.SolidColorBrush)e.AddedItems.First()).Color;
         }
     }
 }

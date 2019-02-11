@@ -12,6 +12,7 @@
 <Page x:Class="AppUIBasics.ControlPages.SwipeControlPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="using:AppUIBasics"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:muxcontrols="using:Microsoft.UI.Xaml.Controls"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
 
     <StackPanel>
@@ -26,19 +27,19 @@
                 <local:ControlExample.Example>
                     <Border>
                         <Border.Resources>
-                            <FontIconSource x:Key="AcceptIcon" Glyph="&#xE10B;"/>
-                            <FontIconSource x:Key="FlagIcon" Glyph="&#xE129;"/>
+                            <muxcontrols:FontIconSource x:Key="AcceptIcon" Glyph="&#xE10B;"/>
+                            <muxcontrols:FontIconSource x:Key="FlagIcon" Glyph="&#xE129;"/>
 
-                            <SwipeItems x:Key="left" Mode="Reveal">
-                                <SwipeItem Background="{ThemeResource ButtonBackgroundThemeBrush}" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Text="Accept" IconSource="{StaticResource AcceptIcon}"
+                            <muxcontrols:SwipeItems x:Key="left" Mode="Reveal">
+                                <muxcontrols:SwipeItem Background="{ThemeResource ButtonBackgroundThemeBrush}" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Text="Accept" IconSource="{StaticResource AcceptIcon}"
                                            Invoked="Accept_ItemInvoked"/>
-                                <SwipeItem Background="{ThemeResource ButtonBackgroundThemeBrush}" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Text="Flag" IconSource="{StaticResource FlagIcon}"
+                                <muxcontrols:SwipeItem Background="{ThemeResource ButtonBackgroundThemeBrush}" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" Text="Flag" IconSource="{StaticResource FlagIcon}"
                                            Invoked="Flag_ItemInvoked"/>
-                            </SwipeItems>
+                            </muxcontrols:SwipeItems>
                         </Border.Resources>
-                        <SwipeControl BorderThickness="1" BorderBrush="{ThemeResource ButtonBackground}" LeftItems="{StaticResource left}" Width="500" Margin="12" Height="68">
-                                <TextBlock Text="Swipe Right" Margin="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </SwipeControl>
+                        <muxcontrols:SwipeControl BorderThickness="1" BorderBrush="{ThemeResource ButtonBackground}" LeftItems="{StaticResource left}" Width="500" Margin="12" Height="68">
+                            <TextBlock Text="Swipe Right" Margin="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </muxcontrols:SwipeControl>
                     </Border>
                 </local:ControlExample.Example>
                 <local:ControlExample.Xaml>
@@ -68,15 +69,15 @@
                 <local:ControlExample.Example>
                     <Border>
                         <Border.Resources>
-                            <FontIconSource x:Key="ArchiveIcon" Glyph="&#xE7B8;"/>
-                            <SwipeItems x:Key="right" Mode="Execute">
-                                <SwipeItem Text="Archive" IconSource="{StaticResource ArchiveIcon}" BehaviorOnInvoked="Close" Invoked="DeleteOne_ItemInvoked"/>
-                            </SwipeItems>
+                            <muxcontrols:FontIconSource x:Key="ArchiveIcon" Glyph="&#xE7B8;"/>
+                            <muxcontrols:SwipeItems x:Key="right" Mode="Execute">
+                                <muxcontrols:SwipeItem Text="Archive" IconSource="{StaticResource ArchiveIcon}" BehaviorOnInvoked="Close" Invoked="DeleteOne_ItemInvoked"/>
+                            </muxcontrols:SwipeItems>
                         </Border.Resources>
-                        <SwipeControl BorderThickness="1" BorderBrush="{ThemeResource ButtonBackground}" RightItems="{StaticResource right}" Width="500" Margin="12" Height="68">
+                        <muxcontrols:SwipeControl BorderThickness="1" BorderBrush="{ThemeResource ButtonBackground}" RightItems="{StaticResource right}" Width="500" Margin="12" Height="68">
                             <TextBlock Text="Swipe Left" Margin="12"
                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </SwipeControl>
+                        </muxcontrols:SwipeControl>
                     </Border>
                 </local:ControlExample.Example>
                 <local:ControlExample.Xaml>
@@ -102,34 +103,34 @@
 
             <local:ControlExample x:Name="Example3" HeaderText="Custom Swipe in a ListView">
                 <local:ControlExample.Example>
-                     <ListView x:Name="lv" Width="800" MinWidth="200" Height="300" Margin="12">
-                         <ListView.Resources>
-                             <FontIconSource x:Key="ReplyAllIcon" Glyph="&#xE8C2;"/>
-                             <FontIconSource x:Key="ReadIcon" Glyph="&#xE8C3;"/>
-                             <FontIconSource x:Key="DeleteIcon" Glyph="&#xE107;"/>
+                    <ListView x:Name="lv" Width="800" MinWidth="200" Height="300" Margin="12">
+                        <ListView.Resources>
+                            <muxcontrols:FontIconSource x:Key="ReplyAllIcon" Glyph="&#xE8C2;"/>
+                            <muxcontrols:FontIconSource x:Key="ReadIcon" Glyph="&#xE8C3;"/>
+                            <muxcontrols:FontIconSource x:Key="DeleteIcon" Glyph="&#xE107;"/>
 
-                             <SwipeItems x:Key="left" Mode="Reveal">
-                                 <SwipeItem Text="Reply All" IconSource="{StaticResource ReplyAllIcon}"
+                            <muxcontrols:SwipeItems x:Key="left" Mode="Reveal">
+                                <muxcontrols:SwipeItem Text="Reply All" IconSource="{StaticResource ReplyAllIcon}"
                                         Background="#FF3e6fa7" Foreground="White"/>
-                                 <SwipeItem Text="Open" IconSource="{StaticResource ReadIcon}"
+                                <muxcontrols:SwipeItem Text="Open" IconSource="{StaticResource ReadIcon}"
                                         Background="#FFff9501" Foreground="White"/>
-                             </SwipeItems>
-                             <SwipeItems x:Key="right" Mode="Execute">
-                                 <SwipeItem Text="Delete" IconSource="{StaticResource DeleteIcon}"
+                            </muxcontrols:SwipeItems>
+                            <muxcontrols:SwipeItems x:Key="right" Mode="Execute">
+                                <muxcontrols:SwipeItem Text="Delete" IconSource="{StaticResource DeleteIcon}"
                                         Background="Red" Invoked="DeleteItem_ItemInvoked"/>
-                             </SwipeItems>
-                         </ListView.Resources>
+                            </muxcontrols:SwipeItems>
+                        </ListView.Resources>
 
-                         <ListView.ItemTemplate>
-                             <DataTemplate>
-                                 <SwipeControl BorderThickness="0,1,0,0" BorderBrush="{ThemeResource ButtonBackground}" Height="68" MinWidth="200" LeftItems="{StaticResource left}"
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <muxcontrols:SwipeControl BorderThickness="0,1,0,0" BorderBrush="{ThemeResource ButtonBackground}" Height="68" MinWidth="200" LeftItems="{StaticResource left}"
                                            RightItems="{StaticResource right}">
-                                     <TextBlock Text="{Binding}" FontSize="24" Margin="12"
+                                    <TextBlock Text="{Binding}" FontSize="24" Margin="12"
                                             HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-                                 </SwipeControl>
-                             </DataTemplate>
-                         </ListView.ItemTemplate>
-                     </ListView>
+                                </muxcontrols:SwipeControl>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </local:ControlExample.Example>
                 <local:ControlExample.Xaml>
                     <x:String xml:space="preserve">
@@ -170,20 +171,20 @@
                 <local:ControlExample.Example>
                     <Border>
                         <Border.Resources>
-                            <FontIconSource x:Key="LockIcon" Glyph="&#xE8D7;"/>
+                            <muxcontrols:FontIconSource x:Key="LockIcon" Glyph="&#xE8D7;"/>
                             <LinearGradientBrush x:Key="PurpleGradient" StartPoint="0,0.5" EndPoint="1,0.5">
                                 <GradientStop Color="#ff8990f9" Offset="0.0"/>
                                 <GradientStop Color="#ff5b66fb" Offset="0.5"/>
                                 <GradientStop Color="#ff5c1df4" Offset="1.0"/>
                             </LinearGradientBrush>
-                            <SwipeItems x:Key="right" Mode="Execute">
-                                <SwipeItem Text="Lock" Background="{StaticResource PurpleGradient}" IconSource="{StaticResource LockIcon}" BehaviorOnInvoked="Close"/>
-                            </SwipeItems>
+                            <muxcontrols:SwipeItems x:Key="right" Mode="Execute">
+                                <muxcontrols:SwipeItem Text="Lock" Background="{StaticResource PurpleGradient}" IconSource="{StaticResource LockIcon}" BehaviorOnInvoked="Close"/>
+                            </muxcontrols:SwipeItems>
                         </Border.Resources>
-                        <SwipeControl BorderThickness="1" BorderBrush="{ThemeResource ButtonBackground}" RightItems="{StaticResource right}" Width="500" Margin="12" Height="68">
+                        <muxcontrols:SwipeControl BorderThickness="1" BorderBrush="{ThemeResource ButtonBackground}" RightItems="{StaticResource right}" Width="500" Margin="12" Height="68">
                             <TextBlock Text="Swipe Left" Margin="12"
                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </SwipeControl>
+                        </muxcontrols:SwipeControl>
                     </Border>
                 </local:ControlExample.Example>
                 <local:ControlExample.Xaml>
@@ -216,17 +217,17 @@
                 <local:ControlExample.Example>
                     <Border>
                         <Border.Resources>
-                            <SwipeItems x:Key="left" Mode="Reveal">
-                                <SwipeItem Text="Coffee" Background="{ThemeResource ButtonBackgroundThemeBrush}" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}">
-                                    <SwipeItem.IconSource>
-                                        <BitmapIconSource UriSource="ms-appx:///Assets/CoffeeCup.png"/>
-                                    </SwipeItem.IconSource>
-                                </SwipeItem>
-                            </SwipeItems>
+                            <muxcontrols:SwipeItems x:Key="left" Mode="Reveal">
+                                <muxcontrols:SwipeItem Text="Coffee" Background="{ThemeResource ButtonBackgroundThemeBrush}" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}">
+                                    <muxcontrols:SwipeItem.IconSource>
+                                        <muxcontrols:BitmapIconSource UriSource="ms-appx:///Assets/CoffeeCup.png"/>
+                                    </muxcontrols:SwipeItem.IconSource>
+                                </muxcontrols:SwipeItem>
+                            </muxcontrols:SwipeItems>
                         </Border.Resources>
-                        <SwipeControl BorderThickness="1" BorderBrush="{ThemeResource ButtonBackground}" LeftItems="{StaticResource left}" Width="500" Margin="12" Height="68">
+                        <muxcontrols:SwipeControl BorderThickness="1" BorderBrush="{ThemeResource ButtonBackground}" LeftItems="{StaticResource left}" Width="500" Margin="12" Height="68">
                             <TextBlock Text="Swipe Right" Margin="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </SwipeControl>
+                        </muxcontrols:SwipeControl>
                     </Border>
                 </local:ControlExample.Example>
                 <local:ControlExample.Xaml>

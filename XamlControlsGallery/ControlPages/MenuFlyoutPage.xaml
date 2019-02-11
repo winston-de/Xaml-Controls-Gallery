@@ -14,7 +14,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="using:AppUIBasics"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
-        xmlns:isApiContract5="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 5)">
+        xmlns:contract5Present="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 5)">
     <StackPanel>
         <local:ControlExample x:Name="Example1" HeaderText="An AppBarButton with a MenuFlyout.">
             <StackPanel x:Name="Control1" Orientation="Horizontal">
@@ -148,7 +148,7 @@
             </local:ControlExample.Xaml>
         </local:ControlExample>
         <local:ControlExample x:Name="Example5"
-                HeaderText="A MenuFlyout with icons and Keyboard Accelerators." FontFamily="Segoe UI" Loaded="Example5_Loaded">
+                HeaderText="A MenuFlyout with icons and Keyboard Accelerators." FontFamily="Segoe UI" Loaded="Example5_Loaded" MinimumUniversalAPIContract="5">
             <Button x:Name="Control5" Content="Edit Options">
                 <Button.Flyout>
                     <MenuFlyout>
@@ -156,19 +156,19 @@
                             <MenuFlyoutItem.Icon>
                                 <FontIcon Glyph="&#xE72D;" />
                             </MenuFlyoutItem.Icon>
-                            <isApiContract5:MenuFlyoutItem.KeyboardAccelerators>
-                                <KeyboardAccelerator Key="S" Modifiers="Control" />
-                            </isApiContract5:MenuFlyoutItem.KeyboardAccelerators>
+                            <contract5Present:MenuFlyoutItem.KeyboardAccelerators>
+                                <contract5Present:KeyboardAccelerator Key="S" Modifiers="Control" />
+                            </contract5Present:MenuFlyoutItem.KeyboardAccelerators>
                         </MenuFlyoutItem>
                         <MenuFlyoutItem Text="Copy" Icon="Copy" FontFamily="Consolas" >
-                            <isApiContract5:MenuFlyoutItem.KeyboardAccelerators>
-                                <KeyboardAccelerator Key="C" Modifiers="Control" />
-                            </isApiContract5:MenuFlyoutItem.KeyboardAccelerators>
+                            <contract5Present:MenuFlyoutItem.KeyboardAccelerators>
+                                <contract5Present:KeyboardAccelerator Key="C" Modifiers="Control" />
+                            </contract5Present:MenuFlyoutItem.KeyboardAccelerators>
                         </MenuFlyoutItem>
                         <MenuFlyoutItem Text="Delete" Icon="Delete" FontFamily="Segoe UI" >
-                            <isApiContract5:MenuFlyoutItem.KeyboardAccelerators>
-                                <KeyboardAccelerator Key="Delete"/>
-                            </isApiContract5:MenuFlyoutItem.KeyboardAccelerators>
+                            <contract5Present:MenuFlyoutItem.KeyboardAccelerators>
+                                <contract5Present:KeyboardAccelerator Key="Delete"/>
+                            </contract5Present:MenuFlyoutItem.KeyboardAccelerators>
                         </MenuFlyoutItem>
                         <MenuFlyoutSeparator />
                         <MenuFlyoutItem Text="Rename" />

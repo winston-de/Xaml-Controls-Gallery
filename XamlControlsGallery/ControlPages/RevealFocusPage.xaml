@@ -31,7 +31,7 @@
 
             <Flyout x:Key="myPrimaryColorPickerFlyout">
                 <RelativePanel>
-                    <ColorPicker x:Name="myPrimaryColorPicker"
+                    <mux:ColorPicker x:Name="myPrimaryColorPicker"
                          IsColorChannelTextInputVisible="False"
                          IsHexInputVisible="False"
                          Color="{StaticResource SystemAltHighColor}"/>
@@ -51,7 +51,7 @@
 
             <Flyout x:Key="mySecondaryColorPickerFlyout">
                 <RelativePanel>
-                    <ColorPicker x:Name="mySecondaryColorPicker"
+                    <mux:ColorPicker x:Name="mySecondaryColorPicker"
                          IsColorChannelTextInputVisible="False"
                          IsHexInputVisible="False"
                                  Color="{StaticResource SystemBaseHighColor}"/>

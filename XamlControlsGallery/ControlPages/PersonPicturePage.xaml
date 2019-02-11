@@ -5,13 +5,14 @@
     xmlns:local="using:AppUIBasics"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxcontrols="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
     <StackPanel>
         <local:ControlExample x:Name="Example1" HeaderText="Select different looks for the person picture.">
 
             <local:ControlExample.Example>
-                <PersonPicture x:Name="personPicture" Height="300"
+                <muxcontrols:PersonPicture x:Name="personPicture" Height="300"
                 VerticalAlignment="Top"
                 ProfilePicture="{Binding IsChecked, ElementName=ProfileImageRadio, Converter={StaticResource booleanToValueConverter}, ConverterParameter='https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/images/shoulder-tap-static-payload.png'}"
                 DisplayName="{x:Bind DisplayNameRadio.IsChecked, Mode=OneWay, Converter={StaticResource booleanToValueConverter}, ConverterParameter='Jane Doe'}"

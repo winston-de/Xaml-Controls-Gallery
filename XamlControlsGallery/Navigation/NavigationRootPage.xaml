@@ -15,7 +15,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mux="using:Microsoft.UI.Xaml.Controls"
     xmlns:local="using:AppUIBasics"
-    xmlns:isApiContract5="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 5)">
+    xmlns:contract5Present="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 5)">
 
     <Page.Resources>
         <DataTemplate x:Key="NavigationViewHeaderTemplate">
@@ -85,9 +85,9 @@
                     QuerySubmitted="OnControlsSearchBoxQuerySubmitted"
                     RequestedTheme="Light"
                     TextChanged="OnControlsSearchBoxTextChanged" >
-                    <isApiContract5:AutoSuggestBox.KeyboardAccelerators>
-                        <KeyboardAccelerator Invoked="KeyboardAccelerator_Invoked" Key="E" Modifiers="Control"/>
-                    </isApiContract5:AutoSuggestBox.KeyboardAccelerators>
+                    <!--<contract5Present:AutoSuggestBox.KeyboardAccelerators>
+                        <contract5Present:KeyboardAccelerator Invoked="KeyboardAccelerator_Invoked" Key="E" Modifiers="Control"/>
+                    </contract5Present:AutoSuggestBox.KeyboardAccelerators>-->
                 </AutoSuggestBox>
             </mux:NavigationView.AutoSuggestBox>
 

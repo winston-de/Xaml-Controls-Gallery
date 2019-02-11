@@ -8,7 +8,8 @@
     xmlns:muxcontrols="using:Microsoft.UI.Xaml.Controls"
     xmlns:l="using:AppUIBasics.ControlPages"
     xmlns:common="using:AppUIBasics.Common"
-    mc:Ignorable="d" FontFamily="Segoe UI">
+    mc:Ignorable="d" FontFamily="Segoe UI"
+    xmlns:contract5Present="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 5)">
 
     <Page.Resources>
         <DataTemplate x:Key="HorizontalBarTemplate" x:DataType="l:Bar">
@@ -66,7 +67,7 @@
                                ItemTemplate="{StaticResource HorizontalBarTemplate}"/>
             </ScrollViewer>
             <local:ControlExample.Options>
-                <StackPanel Spacing="12">
+                <StackPanel contract5Present:Spacing="12">
                     <Button x:Name="AddBtn" Content="Add Item" Click="AddBtn_Click" MinWidth="150"/>
                     <Button x:Name="DeleteBtn" Content="Remove Item" Click="DeleteBtn_Click" MinWidth="150"/>
 
@@ -123,7 +124,7 @@
             </muxcontrols:ScrollAnchorProvider>
 
             <local:ControlExample.Options>
-                <StackPanel Spacing="12">
+                <StackPanel contract5Present:Spacing="12">
                     <RadioButton GroupName="Sample2Layouts" Content="Uniform grid" Tag="UniformGridLayout2" Click="LayoutBtn_Click"/>
                     <RadioButton GroupName="Sample2Layouts" IsChecked="True" Content="Custom virtualizing layout" Tag="MyFeedLayout" Click="LayoutBtn_Click"/>
                 </StackPanel>
