@@ -30,7 +30,7 @@ namespace AppUIBasics.ControlPages
         {
             this.InitializeComponent();
             InitializeData();
-            repeater2.ItemsSource = Enumerable.Range(0, 500);
+            //repeater2.ItemsSource = Enumerable.Range(0, 500);
         }
 
         private void InitializeData()
@@ -91,7 +91,7 @@ namespace AppUIBasics.ControlPages
         {
             string layoutKey = ((FrameworkElement)sender).Tag as string;
 
-            repeater2.Layout = Resources[layoutKey] as Microsoft.UI.Xaml.Controls.VirtualizingLayout;
+            //repeater2.Layout = Resources[layoutKey] as Microsoft.UI.Xaml.Controls.VirtualizingLayout;
 
             layout2.Value = layoutKey;
         }
