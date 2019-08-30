@@ -414,9 +414,6 @@
     <Compile Include="ControlPages\PageTransitionPage.xaml.cs">
       <DependentUpon>PageTransitionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ControlPages\ScrollViewer2Page.xaml.cs">
-      <DependentUpon>ScrollViewer2Page.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ControlPages\TeachingTipPage.xaml.cs">
       <DependentUpon>TeachingTipPage.xaml</DependentUpon>
     </Compile>
@@ -465,9 +462,6 @@
     </Compile>
     <Compile Include="ControlPages\RichTextBlockPage.xaml.cs">
       <DependentUpon>RichTextBlockPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ControlPages\ScrollViewerPage.xaml.cs">
-      <DependentUpon>ScrollViewerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ControlPages\SemanticZoomPage.xaml.cs">
       <DependentUpon>SemanticZoomPage.xaml</DependentUpon>
@@ -690,10 +684,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ControlPages\TeachingTipPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ControlPages\ScrollViewer2Page.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -925,10 +915,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ControlPages\ScrollViewerPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="ControlPages\SemanticZoomPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1082,7 +1068,7 @@
       <Version>6.1.9</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
-      <Version>2.2.190611001-prerelease</Version>
+      <Version>2.2.190828001</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Xaml.Behaviors.Uwp.Managed">
       <Version>2.0.0</Version>
