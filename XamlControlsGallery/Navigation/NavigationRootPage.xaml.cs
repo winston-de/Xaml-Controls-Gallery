@@ -131,7 +131,13 @@ namespace AppUIBasics
         {
             foreach (var group in ControlInfoDataSource.Instance.Groups.OrderBy(i => i.Title))
             {
-                var item = new Microsoft.UI.Xaml.Controls.NavigationViewItem() { Content = group.Title, Tag = group.UniqueId, DataContext = group };
+                var item = new Microsoft.UI.Xaml.Controls.NavigationViewItem() {
+                    Content = group.Title,
+                    Tag = group.UniqueId,
+                    DataContext = group,
+                    MenuItemsSource = group.Items
+                };
+               
                 AutomationProperties.SetName(item, group.Title);
                 if (group.ImagePath.ToLowerInvariant().EndsWith(".png"))
                 {
@@ -150,10 +156,12 @@ namespace AppUIBasics
                 if (group.UniqueId == "AllControls")
                 {
                     this._allControlsMenuItem = item;
+                    item.MenuItemsSource = null;
                 }
                 else if (group.UniqueId == "NewControls")
                 {
                     this._newControlsMenuItem = item;
+                    item.MenuItemsSource = null;
                 }
             }
 
@@ -222,8 +230,19 @@ namespace AppUIBasics
                 }
                 else
                 {
-                    var itemId = ((ControlInfoDataGroup)invokedItem.DataContext).UniqueId;
-                    rootFrame.Navigate(typeof(SectionPage), itemId);
+                    var currItem = invokedItem.DataContext;
+                    var type = currItem.GetType();
+
+                    if (type == typeof(ControlInfoDataGroup))
+                    {
+                        var itemId = ((ControlInfoDataGroup)currItem).UniqueId;
+                        rootFrame.Navigate(typeof(SectionPage), itemId);
+                    }
+                    else if (type == typeof(ControlInfoDataItem))
+                    {
+                        var itemId = ((ControlInfoDataItem)currItem).UniqueId;
+                        rootFrame.Navigate(typeof(ItemPage), itemId);
+                    }
                 }
             }
         }
