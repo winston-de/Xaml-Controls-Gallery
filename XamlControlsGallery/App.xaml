@@ -13,13 +13,14 @@
     x:Class="AppUIBasics.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:AppUIBasics"
-    xmlns:common="using:AppUIBasics.Common">
+    xmlns:common="using:AppUIBasics.Common"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+    xmlns:local="using:AppUIBasics">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <local:ItemTemplates />
-                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>
+                <controls:XamlControlsResources ControlsResourcesVersion="Version2" />
             </ResourceDictionary.MergedDictionaries>
 
             <ResourceDictionary.ThemeDictionaries>
@@ -47,15 +48,18 @@
             </ResourceDictionary.ThemeDictionaries>
 
             <LinearGradientBrush x:Key="HeroImageGradientBrush" StartPoint="0.5,0" EndPoint="0.5,1">
-                <GradientStop Offset="0" Color="{ThemeResource SystemAltMediumColor}"/>
-                <GradientStop Offset="0.5" Color="{ThemeResource SystemAltMediumColor}"/>
-                <GradientStop Offset="1" Color="Transparent"/>
+                <GradientStop Offset="0" Color="{ThemeResource SystemAltMediumColor}" />
+                <GradientStop Offset="0.5" Color="{ThemeResource SystemAltMediumColor}" />
+                <GradientStop Offset="1" Color="Transparent" />
             </LinearGradientBrush>
 
             <!--  Application-specific resources  -->
             <common:NullableBooleanToBooleanConverter x:Key="nullableBooleanToBooleanConverter" />
             <common:NullToVisibilityConverter x:Key="nullToVisibilityConverter" />
-            <common:NullToVisibilityConverter x:Key="inverseNullToVisibilityConverter" NonNullValue="Collapsed" NullValue="Visible" />
+            <common:NullToVisibilityConverter
+                x:Key="inverseNullToVisibilityConverter"
+                NonNullValue="Collapsed"
+                NullValue="Visible" />
             <common:BooleanToValueConverter x:Key="booleanToValueConverter" />
             <common:DoubleToThicknessConverter x:Key="doubleToThicknessConverter" />
 
@@ -70,17 +74,23 @@
             <x:String x:Key="ControlsName">All controls</x:String>
             <x:String x:Key="NewControlsName">What's New</x:String>
 
-            <Style x:Key="OutputTextBlockStyle" BasedOn="{StaticResource BodyTextBlockStyle}" TargetType="TextBlock">
+            <Style
+                x:Key="OutputTextBlockStyle"
+                BasedOn="{StaticResource BodyTextBlockStyle}"
+                TargetType="TextBlock">
                 <Setter Property="Margin" Value="8,8,0,0" />
             </Style>
-           
-            <Style x:Name="NarrowHeaderTextBlockStyle" BasedOn="{StaticResource HeaderTextBlockStyle}" TargetType="TextBlock">
-                <Setter Property="Foreground" Value="{StaticResource SystemControlForegroundChromeWhiteBrush}"/>
-                <Setter Property="VerticalAlignment" Value="Top"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="Margin" Value="36,12,0,0"/>
+
+            <Style
+                x:Name="NarrowHeaderTextBlockStyle"
+                BasedOn="{StaticResource HeaderTextBlockStyle}"
+                TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{StaticResource SystemControlForegroundChromeWhiteBrush}" />
+                <Setter Property="VerticalAlignment" Value="Top" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="Margin" Value="36,12,0,0" />
             </Style>
-            
+
             <Style x:Key="ControlPageScrollStyle" TargetType="ScrollViewer">
                 <Setter Property="VerticalScrollMode" Value="Auto" />
                 <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
