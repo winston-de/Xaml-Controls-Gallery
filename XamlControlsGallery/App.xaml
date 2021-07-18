@@ -19,12 +19,13 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <local:ItemTemplates />
                 <controls:XamlControlsResources ControlsResourcesVersion="Version2" />
+                <local:ItemTemplates />
             </ResourceDictionary.MergedDictionaries>
 
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Light">
+                    <Color x:Key="SolidTintedBackgroundFillColorBase">#F3F3F3</Color>
                     <StaticResource x:Key="HomePageBackgroundBrush" ResourceKey="ApplicationPageBackgroundThemeBrush" />
                     <StaticResource x:Key="ControlExampleDisplayBrush" ResourceKey="SystemControlBackgroundAltHighBrush" />
                     <SolidColorBrush x:Key="SearchBoxBorderBrush" Color="Transparent" />
@@ -32,6 +33,7 @@
                     <Thickness x:Key="ControlExampleDisplayBorderThickness">0</Thickness>
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Dark">
+                    <Color x:Key="SolidTintedBackgroundFillColorBase">#202020</Color>
                     <StaticResource x:Key="HomePageBackgroundBrush" ResourceKey="ApplicationPageBackgroundThemeBrush" />
                     <StaticResource x:Key="ControlExampleDisplayBrush" ResourceKey="SystemControlBackgroundAltHighBrush" />
                     <SolidColorBrush x:Key="SearchBoxBorderBrush" Color="Transparent" />
@@ -52,6 +54,9 @@
                 <GradientStop Offset="0.5" Color="{ThemeResource SystemAltMediumColor}" />
                 <GradientStop Offset="1" Color="Transparent" />
             </LinearGradientBrush>
+
+            <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SolidTintedBackgroundFillColorBase}" />
+            <SolidColorBrush x:Key="SolidBackgroundFillColorBase" Color="{ThemeResource SolidTintedBackgroundFillColorBase}" />
 
             <!--  Application-specific resources  -->
             <common:NullableBooleanToBooleanConverter x:Key="nullableBooleanToBooleanConverter" />

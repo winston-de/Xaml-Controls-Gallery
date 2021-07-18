@@ -20,6 +20,7 @@ using Windows.Foundation.Metadata;
 using Windows.Gaming.Input;
 using Windows.System;
 using Windows.System.Profile;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Automation;
 using Windows.UI.Xaml.Controls;
@@ -542,6 +543,10 @@ namespace AppUIBasics
         private void CtrlF_Invoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
         {
             controlsSearchBox.Focus(FocusState.Programmatic);
+        }
+
+        private void NavigationViewControl_Loading(FrameworkElement sender, object args)
+        {
         }
     }
 

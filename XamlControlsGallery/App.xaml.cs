@@ -8,6 +8,7 @@
 //
 //*********************************************************
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
@@ -20,8 +21,10 @@ using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation.Metadata;
 using Windows.System.Profile;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace AppUIBasics
@@ -114,17 +117,41 @@ namespace AppUIBasics
         protected async override void OnActivated(IActivatedEventArgs args)
         {
             await EnsureWindow(args);
-
             base.OnActivated(args);
+        }
+
+        void MakeHotBackgrounds()
+        {
+            Color Tint(Color source, Color tint, decimal alpha)
+            {
+                //(tint -source)*alpha + source
+                var red = Convert.ToByte(((tint.R - source.R) * alpha + source.R));
+                var blue = Convert.ToByte(((tint.B - source.B) * alpha + source.B));
+                var green = Convert.ToByte(((tint.G - source.G) * alpha + source.G));
+                return Color.FromArgb(255, red, green, blue);
+            }
+            var pageBgDk = (Color)(App.Current.Resources.ThemeDictionaries["Dark"] as ResourceDictionary)["SolidTintedBackgroundFillColorBase"];
+            var pageBgLi = (Color)(App.Current.Resources.ThemeDictionaries["Light"] as ResourceDictionary)["SolidTintedBackgroundFillColorBase"];
+            var accentDk = (Color)(App.Current.Resources.ThemeDictionaries["Dark"] as ResourceDictionary)["SystemAccentColorDark1"];
+            var accentLi = (Color)(App.Current.Resources.ThemeDictionaries["Light"] as ResourceDictionary)["SystemAccentColorLight1"];
+            var newBgDk = Tint(pageBgDk, accentDk, (decimal)0.08);
+            var newBgLi = Tint(pageBgLi, accentLi, (decimal)0.15);
+            (App.Current.Resources.ThemeDictionaries["Dark"] as ResourceDictionary)["SolidTintedBackgroundFillColorBase"] = newBgDk;
+            (App.Current.Resources.ThemeDictionaries["Light"] as ResourceDictionary)["SolidTintedBackgroundFillColorBase"] = newBgLi;
         }
 
         private async Task EnsureWindow(IActivatedEventArgs args)
         {
+            MakeHotBackgrounds();
             // No matter what our destination is, we're going to need control data loaded - let's knock that out now.
             // We'll never need to do this again.
             await ControlInfoDataSource.Instance.GetGroupsAsync();
 
             Frame rootFrame = GetRootFrame();
+            //foreach (var item in App.Current.Resources.MergedDictionaries.First().ThemeDictionaries["Dark"] as ResourceDictionary)
+            //{
+            //    Debug.WriteLine(item.Key);
+            //}
 
             ThemeHelper.Initialize();
 
